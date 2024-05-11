@@ -1,0 +1,13 @@
+    keys = pygame.key.get_pressed()       
+    
+    
+    if keys[pygame.K_a]  and X > -400:
+        X -= 5
+    elif keys[pygame.K_d] and X < 800:
+        X += 5   
+    elif keys[pygame.K_w] and Y > 0:
+        Y -= 5  
+    elif keys[pygame.K_s] and Y < 150:
+        Y += 5  
+    
+    dsp.blit(hero[goy] ,(X,Y))        #Вставить после pygame.quit() и перед clock.tick(FPS), на линии for i in pygame.event.get():

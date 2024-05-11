@@ -1,0 +1,36 @@
+
+pygame.init()
+
+dsp = pygame.display.set_mode((1400,701))
+
+iconka = pygame.image.load('game_dla_school/iconka.png')
+pygame.display.set_icon(iconka)
+
+pygame.display.set_caption('Ходилка')
+
+fon = pygame.image.load('game_dla_school/fon.jpg')
+
+hero = [
+    pygame.image.load('game_dla_school/hero.png')
+]
+goy = 0 
+X = -400
+Y = 150
+
+clock=pygame.time.Clock()    
+FPS = 100
+
+EXIT = True
+while EXIT != False:
+    
+    dsp.blit(fon,(0,0))   
+    
+    for i in pygame.event.get():
+        if i.type == pygame.QUIT:
+            EXIT = False
+            pygame.quit()
+
+
+    clock.tick(FPS)
+    pygame.display.update()
+   
